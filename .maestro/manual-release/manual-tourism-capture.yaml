@@ -1,0 +1,35 @@
+# Run explicitly after preparing the documented release-QA state; not a general smoke flow.
+appId: com.tteumsae.app
+name: Manual release - tourist example at 06 hour
+---
+# One-time 2026-09-13 capture; prepare a 06:xx deadline with the native hour wheel first.
+- assertVisible: "오늘 06:[0-9]{2}까지"
+- takeScreenshot: tourist-02-input-ready
+- tapOn: "틈새 찾기"
+- extendedWaitUntil:
+    visible: "들를 곳을 골라보세요"
+    timeout: 60000
+- takeScreenshot: tourist-03-results
+- scrollUntilVisible:
+    element: "^순포해변$"
+    direction: DOWN
+- tapOn: "^순포해변$"
+- assertVisible: "선택됨"
+- takeScreenshot: tourist-04-selected
+- tapOn: "순포해변 장소 정보 보기"
+- extendedWaitUntil:
+    visible: "장소 상세"
+    timeout: 15000
+- assertVisible: "순포해변"
+- extendedWaitUntil:
+    notVisible: "최신 장소 정보를 확인하고 있어요"
+    timeout: 45000
+- takeScreenshot: tourist-05-detail-top
+- scrollUntilVisible:
+    element: ".*날씨"
+    direction: DOWN
+- takeScreenshot: tourist-06-detail-info
+- tapOn: "뒤로"
+- tapOn: "지도 보기"
+- waitForAnimationToEnd
+- takeScreenshot: tourist-07-map

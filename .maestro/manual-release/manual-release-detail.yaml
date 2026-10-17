@@ -1,0 +1,30 @@
+# Run explicitly after preparing the documented release-QA state; not a general smoke flow.
+appId: com.tteumsae.app
+name: Manual release - selection and detail
+---
+- assertVisible: "들를 곳을 골라보세요"
+- tapOn:
+    text: "^선택$"
+    index: 0
+- assertVisible: "선택됨"
+- assertVisible: "이곳 들러 카카오맵 안내"
+- takeScreenshot: manual-07-selected
+- tapOn:
+    text: "^상세보기.*"
+    index: 0
+- extendedWaitUntil:
+    visible: "장소 상세"
+    timeout: 15000
+- extendedWaitUntil:
+    notVisible: "최신 장소 정보를 확인하고 있어요"
+    timeout: 45000
+- takeScreenshot: manual-08-detail-top
+- scrollUntilVisible:
+    element: ".*한국관광공사 TourAPI.*"
+    direction: DOWN
+- takeScreenshot: manual-09-detail-info
+- tapOn: "뒤로"
+- assertVisible: "선택됨"
+- tapOn: "지도 보기"
+- waitForAnimationToEnd
+- takeScreenshot: manual-10-result-map

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="틈새(Tteumsae) 계정과 연결 데이터의 삭제 방법을 안내합니다." />
+    <title>계정 및 데이터 삭제 | 틈새</title>
+    <style>
+      :root { color-scheme: light; --ink:#25211f; --muted:#6c625d; --accent:#8b3f35; --line:#e7ddd7; --paper:#fffdfb; --wash:#f7f1ed; }
+      * { box-sizing: border-box; }
+      body { margin:0; color:var(--ink); background:var(--wash); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.7; word-break:keep-all; }
+      main { width:min(800px,calc(100% - 32px)); margin:32px auto; padding:clamp(28px,6vw,64px); background:var(--paper); border:1px solid var(--line); border-radius:24px; }
+      h1,h2 { line-height:1.3; letter-spacing:-.03em; }
+      h1 { margin:0 0 8px; font-size:clamp(2rem,7vw,3rem); }
+      h2 { margin:40px 0 12px; font-size:1.25rem; }
+      p,li { color:var(--muted); }
+      strong { color:var(--ink); }
+      a { color:var(--accent); text-underline-offset:3px; }
+      ol,ul { padding-left:1.3rem; }
+      li + li { margin-top:8px; }
+      .eyebrow { color:var(--accent); font-weight:700; }
+      .path { padding:20px; background:var(--wash); border-radius:16px; font-size:1.05rem; }
+      .button { display:inline-block; margin-top:8px; padding:12px 18px; color:#fff; background:var(--accent); border-radius:999px; font-weight:700; text-decoration:none; }
+      footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line); }
+      @media (max-width:560px) { main { width:100%; margin:0; border:0; border-radius:0; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">틈새 · Tteumsae</p>
+        <h1>계정 및 데이터 삭제</h1>
+        <p>운영자: 신홍 · 최종 갱신: 2026년 9월 13일</p>
+      </header>
+
+      <section>
+        <h2>앱에서 바로 삭제하기</h2>
+        <p class="path"><strong>설정 → 계정 → 계정 삭제</strong></p>
+        <ol>
+          <li>로그인된 틈새 앱에서 위 메뉴를 엽니다.</li>
+          <li>안내 내용을 확인하고 필요한 경우 최근 로그인으로 본인임을 확인합니다.</li>
+          <li>최종 삭제를 확인하면 계정과 연결 데이터가 영구 삭제됩니다.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>이메일로 삭제 요청하기</h2>
+        <p>앱을 사용할 수 없다면 아래 주소로 계정 삭제를 요청할 수 있습니다.</p>
+        <a class="button" href="mailto:godburgundy@gmail.com?subject=Tteumsae%20account%20deletion%20request">삭제 요청 이메일 보내기</a>
+        <p>원활한 계정 확인을 위해 <strong>로그인 제공자(카카오 또는 Google)</strong>, 계정에서 사용한 닉네임, 답변받을 이메일 주소를 적어 주세요. 계정 오삭제를 막기 위해 추가 본인 확인을 요청할 수 있습니다.</p>
+        <p><strong>비밀번호, 소셜 로그인 비밀번호 또는 액세스 토큰은 요청하지 않습니다.</strong> 이메일에 이러한 정보를 적지 마세요.</p>
+      </section>
+
+      <section>
+        <h2>삭제되는 데이터</h2>
+        <ul>
+          <li>Supabase Auth의 틈새 로그인 계정</li>
+          <li>닉네임, 프로필 이미지와 이전 버전에서 입력한 연령대·성별이 있는 경우 해당 값을 포함한 프로필</li>
+        </ul>
+        <p>위 데이터는 계정 삭제와 함께 삭제되며 복구할 수 없습니다. 카카오 또는 Google 자체 계정은 삭제되지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>비로그인 데이터와 처리 시점</h2>
+        <p>기기에만 저장한 장소는 계정 삭제로 삭제되지 않습니다. 앱에서 저장을 해제하면 목록에서 제외되지만 일부 로컬 기록은 남을 수 있습니다. 기기 데이터를 완전히 지우려면 Android 설정에서 틈새 앱 데이터를 삭제하거나 앱을 제거하세요.</p>
+        <p>계정 삭제를 요청하면 인증 토큰과 계정 확인 정보가 미국의 Vercel 서버를 거쳐 처리됩니다. 계정·프로필의 주 데이터 저장 지역은 서울이며, 상세한 처리·보관 범위는 개인정보처리방침을 확인해 주세요.</p>
+        <p>이메일 요청은 본인 확인 뒤 부당한 지연 없이 처리하고 완료 사실을 회신합니다. 현재 별도로 보관하는 계정 데이터는 없습니다. 향후 법률 또는 보안상 일부 정보를 보존해야 하는 예외가 생기면 대상, 근거와 기간을 요청자에게 안내하고 다른 데이터와 분리해 보관합니다.</p>
+      </section>
+
+      <section>
+        <h2>문의와 관련 문서</h2>
+        <p>문의: <a href="mailto:godburgundy@gmail.com">godburgundy@gmail.com</a></p>
+        <p><a href="/privacy">틈새 개인정보처리방침 보기</a></p>
+      </section>
+
+      <footer>© 2026 틈새(Tteumsae). 운영자 신홍.</footer>
+    </main>
+  </body>
+</html>

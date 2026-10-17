@@ -3,3 +3,6 @@ gradlew text eol=lf
 *.bat text eol=crlf
 *.jar binary
 *.mp4 binary
+
+# Preserve upstream notice text, including original line endings and whitespace.
+android/app/src/main/assets/licenses/*.txt -text -whitespace

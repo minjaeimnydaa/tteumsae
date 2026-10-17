@@ -1,0 +1,11 @@
+# 새 노트북의 실제 Android SDK 경로로 바꾸세요.
+sdk.dir=C\:\\Users\\YOUR_NAME\\AppData\\Local\\Android\\Sdk
+
+# Kakao Developers 앱의 네이티브 앱 키입니다. REST API 키가 아닙니다.
+KAKAO_MAP_NATIVE_APP_KEY=YOUR_KAKAO_NATIVE_APP_KEY
+
+# Supabase Connect 화면의 Project URL과 publishable key입니다.
+# 둘 중 하나라도 비어 있으면 선택형 로그인만 비활성화되고 게스트 기능은 유지됩니다.
+SUPABASE_URL=
+SUPABASE_PUBLISHABLE_KEY=
+

@@ -1,0 +1,58 @@
+# Run explicitly after preparing the documented release-QA state; not a general smoke flow.
+appId: com.tteumsae.app
+name: Manual release - public route input, no GPS
+---
+- launchApp
+- runFlow:
+    when:
+      visible: '강원도로 가는 길, 어디 들를까\?'
+    commands:
+      - takeScreenshot: manual-01-intro
+      - tapOn: "확인"
+- assertVisible: "목적지 검색"
+- takeScreenshot: manual-02-home
+- tapOn: "목적지 검색"
+- extendedWaitUntil:
+    visible: '어디로, 몇 시까지 가나요\?'
+    timeout: 10000
+- assertNotVisible: "현재 위치로 설정"
+- takeScreenshot: manual-03-input-empty
+- runFlow:
+    when:
+      visible: "출발지 지우기"
+    commands:
+      - tapOn: "출발지 지우기"
+- tapOn: "출발지 장소 검색"
+- inputText: "강릉시청"
+- hideKeyboard
+- extendedWaitUntil:
+    visible: "^강릉시청$"
+    timeout: 20000
+- tapOn:
+    text: "^강릉시청$"
+    index: 1
+- runFlow:
+    when:
+      visible: "목적지 지우기"
+    commands:
+      - tapOn: "목적지 지우기"
+- tapOn: "목적지 장소 검색"
+- inputText: "경포대"
+- hideKeyboard
+- extendedWaitUntil:
+    visible: "^경포대$"
+    timeout: 20000
+- takeScreenshot: manual-04-place-search
+- tapOn:
+    text: "^경포대$"
+    index: 1
+- takeScreenshot: manual-05-input-ready
+- tapOn: "틈새 찾기"
+- extendedWaitUntil:
+    visible: "(들를 곳을 골라보세요|추천 가능한 장소가 없어요)"
+    timeout: 60000
+- extendedWaitUntil:
+    notVisible: "지도를 불러오고 있어요"
+    timeout: 30000
+- assertVisible: "선택한 출발지 기준"
+- takeScreenshot: manual-06-results

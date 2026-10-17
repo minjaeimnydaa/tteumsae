@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="틈새(Tteumsae) 서비스의 개인정보 처리 항목, 이용 목적, 보유 기간과 이용자 권리를 안내합니다."
+    />
+    <title>개인정보처리방침 | 틈새</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #25211f;
+        --muted: #6c625d;
+        --accent: #8b3f35;
+        --line: #e7ddd7;
+        --paper: #fffdfb;
+        --wash: #f7f1ed;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--wash);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.7;
+        word-break: keep-all;
+      }
+      main {
+        width: min(880px, calc(100% - 32px));
+        margin: 32px auto;
+        padding: clamp(28px, 6vw, 64px);
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+      }
+      h1, h2 { line-height: 1.3; letter-spacing: -0.03em; }
+      h1 { margin: 0 0 8px; font-size: clamp(2rem, 7vw, 3rem); }
+      h2 { margin: 44px 0 12px; font-size: 1.25rem; }
+      p, li { color: var(--muted); }
+      strong { color: var(--ink); }
+      a { color: var(--accent); text-underline-offset: 3px; }
+      ul { padding-left: 1.3rem; }
+      li + li { margin-top: 8px; }
+      .eyebrow { color: var(--accent); font-weight: 700; }
+      .summary {
+        margin: 28px 0 0;
+        padding: 20px;
+        background: var(--wash);
+        border-radius: 16px;
+      }
+      nav { margin-top: 20px; }
+      footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); }
+      @media (max-width: 560px) {
+        main { width: 100%; margin: 0; border: 0; border-radius: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">틈새 · Tteumsae</p>
+        <h1>개인정보처리방침</h1>
+        <p>시행일: 2026년 8월 28일</p>
+        <div class="summary">
+          틈새는 약속 전 남는 시간에 들를 장소와 경로를 제안하는 서비스입니다.
+          계정 없이도 이용할 수 있으며, 로그인은 프로필 설정과 계정 관리가 필요한
+          경우에만 선택합니다. 저장한 장소는 현재 이 기기에만 보관됩니다.
+        </div>
+        <nav aria-label="관련 문서">
+          <a href="/account-deletion">계정 및 데이터 삭제 안내</a>
+        </nav>
+      </header>
+
+      <section>
+        <h2>1. 처리하는 개인정보와 수집 방법</h2>
+        <ul>
+          <li><strong>위치·경로 정보:</strong> 현재 위치 또는 사용자가 지정한 출발지·도착지의 좌표, 검색어, 이동 수단과 경유지 정보. 장소 검색·추천과 이동시간 계산 요청 시 앱에서 서버 및 지도·경로 제공 서비스로 전송됩니다.</li>
+          <li><strong>선택 로그인 정보:</strong> Supabase Auth의 이용자 식별자와 카카오 또는 Google 로그인 제공자 정보. 로그인 제공자가 이메일, 닉네임 또는 프로필 이미지를 인증 과정에서 제공할 수 있으나, 공개 프로필 테이블에는 이메일을 별도로 복제해 저장하지 않습니다.</li>
+          <li><strong>프로필 정보:</strong> 닉네임과 프로필 이미지, 이용자가 선택해 입력한 연령대와 성별. 연령대와 성별은 선택 항목이며 현재 장소 추천 결과에는 사용하지 않습니다.</li>
+          <li><strong>기기 저장 정보:</strong> 저장한 장소는 이 기기에만 저장되며 현재 계정이나 Supabase로 동기화하지 않습니다.</li>
+          <li><strong>운영 정보:</strong> 서비스 접속 과정에서 IP 주소, 요청 시각과 오류 정보가 Vercel 등 기반 서비스에서 보안·장애 대응을 위해 처리될 수 있습니다.</li>
+        </ul>
+        <p>로그인 여부와 관계없이 현재 저장 장소와 일부 설정은 기기의 로컬 저장소에만 보관됩니다.</p>
+      </section>
+
+      <section>
+        <h2>2. 이용 목적</h2>
+        <ul>
+          <li>현재 위치와 약속 정보를 바탕으로 장소 검색, 추천, 이동시간 및 경로 제공</li>
+          <li>카카오·Google 로그인, 세션 유지와 이용자 프로필 관리</li>
+          <li>서비스 장애 확인, 비정상 요청 제한, 보안 사고 대응과 이용자 문의 처리</li>
+        </ul>
+        <p>틈새는 개인정보를 판매하거나 맞춤 광고에 사용하지 않으며, 현재 별도의 이용 행태 분석 도구를 사용하지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>3. 외부 서비스와 처리 위탁</h2>
+        <p>기능 제공에 필요한 범위에서 다음 사업자의 시스템을 이용합니다.</p>
+        <ul>
+          <li><strong>Supabase:</strong> 선택 로그인, 세션과 계정·프로필 데이터베이스 운영</li>
+          <li><strong>Vercel:</strong> API와 안내 페이지 호스팅, 요청 처리 및 운영 보안</li>
+          <li><strong>카카오:</strong> 지도, 장소 검색, 주소 변환, 경로·이동시간 계산과 선택적 카카오 로그인</li>
+          <li><strong>Google:</strong> 이용자가 선택한 경우 Google 로그인 인증</li>
+        </ul>
+        <p>각 사업자는 해당 기능을 제공하기 위해 국외 서버를 포함한 자체 인프라에서 정보를 처리할 수 있습니다. 실제 운영 전 각 공급자의 처리 지역과 약관 변경 사항을 다시 확인해 이 방침에 반영합니다.</p>
+      </section>
+
+      <section>
+        <h2>4. 보유 기간과 파기</h2>
+        <ul>
+          <li>계정과 프로필은 계정 삭제 시까지 보유하며 계정 삭제가 완료되면 함께 삭제합니다.</li>
+          <li>위치 좌표와 경로 요청은 결과 계산을 위해 일시 처리하며 틈새의 애플리케이션 데이터베이스에 의도적으로 저장하지 않습니다.</li>
+          <li>기기에만 있는 저장 정보와 설정은 앱 안에서 직접 삭제하거나 앱 데이터 삭제 또는 앱 제거로 삭제할 수 있습니다.</li>
+          <li>기반 서비스의 보안·접속 기록은 각 사업자의 운영 설정과 정책에 따라 제한적으로 보관될 수 있습니다.</li>
+        </ul>
+        <p>법령상 별도 보존 의무가 생기는 경우에는 해당 정보만 법정 기간 동안 분리 보관하고, 목적이 끝나면 복구하기 어려운 방식으로 파기합니다. 현재 틈새가 별도로 적용하는 법정 보존 항목은 없습니다.</p>
+      </section>
+
+      <section>
+        <h2>5. 보호 조치</h2>
+        <p>통신 구간 암호화(HTTPS), 데이터베이스 행 단위 접근 제어(RLS), 서버 전용 관리 키의 앱 미포함, 최소 권한 설계를 적용합니다. 인증 토큰·이메일·프로필을 애플리케이션 로그에 의도적으로 기록하지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>6. 이용자의 권리와 행사 방법</h2>
+        <p>이용자는 앱에서 프로필을 수정하고 기기에 저장한 장소를 삭제할 수 있습니다. 계정과 프로필의 삭제는 <a href="/account-deletion">계정 삭제 안내</a>에 따라 앱 안에서 요청하거나 이메일로 요청할 수 있습니다. 본인 확인이 필요한 요청에는 필요한 최소 정보만 확인합니다.</p>
+      </section>
+
+      <section>
+        <h2>7. 개인정보 보호책임자와 문의</h2>
+        <p>
+          서비스·운영자: <strong>틈새(Tteumsae) · 신홍</strong><br />
+          이메일: <a href="mailto:godburgundy@gmail.com">godburgundy@gmail.com</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>8. 방침 변경</h2>
+        <p>서비스 또는 법적 요구사항이 달라지면 이 페이지의 시행일과 내용을 갱신하고, 이용자에게 중요한 변경은 앱 또는 서비스 화면에서 알립니다.</p>
+      </section>
+
+      <footer>© 2026 틈새(Tteumsae). 운영자 신홍.</footer>
+    </main>
+  </body>
+</html>

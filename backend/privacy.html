@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="틈새 수동 출발지 버전의 처리 항목, 국내외 서버 이용, 보관·삭제와 이용자 권리를 안내합니다." />
+    <title>개인정보처리방침 | 틈새</title>
+    <style>
+      :root { color-scheme: light; --ink:#25211f; --muted:#6c625d; --accent:#8b3f35; --line:#e7ddd7; --paper:#fffdfb; --wash:#f7f1ed; }
+      * { box-sizing:border-box; }
+      body { margin:0; color:var(--ink); background:var(--wash); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.7; word-break:keep-all; }
+      main { width:min(880px,calc(100% - 32px)); margin:32px auto; padding:clamp(28px,6vw,64px); background:var(--paper); border:1px solid var(--line); border-radius:24px; }
+      h1,h2,h3 { line-height:1.35; letter-spacing:-.03em; }
+      h1 { margin:0 0 8px; font-size:clamp(2rem,7vw,3rem); }
+      h2 { margin:40px 0 12px; font-size:1.25rem; }
+      h3 { margin:24px 0 8px; font-size:1.05rem; }
+      p,li,td { color:var(--muted); }
+      strong,th { color:var(--ink); }
+      a { color:var(--accent); text-underline-offset:3px; overflow-wrap:anywhere; }
+      ul { padding-left:1.3rem; }
+      li + li { margin-top:8px; }
+      .eyebrow { color:var(--accent); font-weight:700; }
+      .summary,.draft { margin:24px 0; padding:20px; background:var(--wash); border-radius:16px; }
+      .draft { border:2px solid var(--accent); }
+      .table-wrap { overflow:auto; }
+      table { width:100%; border-collapse:collapse; font-size:.95rem; }
+      th,td { padding:12px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+      th { background:var(--wash); }
+      footer { margin-top:44px; padding-top:20px; border-top:1px solid var(--line); }
+      @media(max-width:560px) { main { width:100%; margin:0; border:0; border-radius:0; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">틈새 · Tteumsae</p>
+        <h1>개인정보처리방침</h1>
+        <p>시행일: 2026년 9월 13일 · 대상: Android 0.13.0 수동 출발지 버전</p>
+        <div class="summary">틈새는 이용자가 고른 출발지와 목적지, 도착시간을 바탕으로 들를 장소와 경로를 제안합니다. 핵심 기능은 로그인 없이 이용할 수 있습니다. 이 버전은 기기의 GPS 현재 위치를 읽거나 위치 권한을 요청하지 않습니다. 다만 검색어와 선택한 장소의 좌표는 기능 제공을 위해 서버와 지도·경로 제공자에게 전송됩니다.</div>
+        <nav aria-label="관련 문서"><a href="https://tteumsae-backend-one.vercel.app/account-deletion">계정 및 데이터 삭제 안내</a></nav>
+      </header>
+
+      <section>
+        <h2>1. 적용 범위와 현재 위치 기능</h2>
+        <p>이 방침의 수동 위치 안내는 Android 0.13.0 수동 출발지 배포본에 적용됩니다. 출발지와 목적지는 장소 검색 결과에서 직접 선택하며, 이용자가 선택한 장소에 실제로 있는지 확인하지 않습니다. 기기의 GPS·네트워크 위치를 자동으로 취득하거나 백그라운드 이동을 추적하지 않습니다.</p>
+        <p><strong>이전 개발·테스트 버전과의 구분:</strong> 이전 자동 위치 버전에는 이용자가 위치 권한을 허용하면 현재 위치 좌표를 출발지로 사용하는 기능이 있었습니다. 그 버전의 요청에는 현재 위치 좌표가 포함될 수 있습니다. 수동 버전으로 업데이트하면 이전 모드에서 복원된 경로 입력과 출발 알림을 재사용하지 않으며, 알림은 새로 설정해야 합니다. 이 변경은 이전에 이루어진 처리가 없었다는 뜻은 아닙니다.</p>
+      </section>
+
+      <section>
+        <h2>2. 처리 항목·수집 방법·이용 목적</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">구분</th><th scope="col">항목과 수집 방법</th><th scope="col">목적</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">장소 검색·경로 요청</th><td>이용자가 입력한 검색어, 선택한 출발지·목적지·경유지의 장소 식별자와 좌표, 이동 수단, 선택 카테고리, 도착 마감시각. 상세 조회 시 장소 식별자와 예상 방문시각이 전달될 수 있습니다.</td><td>장소 검색, 지원 지역 확인, 추천·이동시간·경로 계산, 방문 무렵의 날씨 등 장소 정보 제공</td></tr>
+            <tr><th scope="row">선택 로그인</th><td>로그인 제공자(카카오 또는 Google), 계정 식별자, 인증·세션 정보. 제공자가 동의 화면과 설정에 따라 이메일·닉네임·프로필 이미지 주소를 인증정보로 제공할 수 있습니다.</td><td>로그인, 로그인 상태 유지, 계정 확인·삭제</td></tr>
+            <tr><th scope="row">선택 프로필</th><td>닉네임·프로필 이미지 주소와 계정 생성·수정시각. 현재 버전은 연령대·성별을 새로 입력받지 않습니다. 이전 버전에서 저장한 값이 있는 계정은 계정 처리 과정에서 기존 값이 조회·유지될 수 있습니다. 공개 프로필 테이블에 이메일을 별도로 복제하지 않습니다.</td><td>프로필 표시·수정. 이전에 입력한 연령대·성별은 현재 추천 결과에 사용하지 않습니다.</td></tr>
+            <tr><th scope="row">기기 내 저장</th><td>저장한 장소의 정보와 저장시각, 화면 복원용 경로 입력, 출발 알림을 설정한 경로·장소·도착 및 출발시각·길안내 주소, 앱 설정과 로그인 세션</td><td>저장 목록 표시, 앱 화면 복원, 이용자가 요청한 기기 출발 알림과 외부 지도 연결</td></tr>
+            <tr><th scope="row">접속·보안·오류</th><td>접속 과정에서 IP 주소, 요청시각·경로, 응답 상태와 오류 정보가 서버 및 기반 서비스에서 처리됩니다. 요청 URL에 검색어·장소 좌표가 포함되는 경우가 있습니다. 기반 서비스 사업자는 IP 기반 대략 지역을 운영·보안 목적으로 처리할 수 있으며, 틈새 앱은 이를 현재 출발 위치로 사용하지 않습니다.</td><td>비정상 요청 제한, 서비스 운영, 장애·보안 사고 대응</td></tr>
+            <tr><th scope="row">이메일 문의</th><td>보낸 사람의 이메일 주소와 이용자가 문의에 적은 내용, 계정 확인에 필요한 최소 정보</td><td>문의 회신, 권리 행사·삭제 요청 처리</td></tr>
+          </tbody>
+        </table></div>
+        <p>장소 검색·추천·경로 API에는 로그인 계정 식별자나 로그인 인증 토큰을 붙이지 않습니다. 그렇더라도 접속 IP와 요청 기록까지 익명이라는 뜻은 아닙니다. 검색어나 문의에는 주민등록번호·비밀번호·다른 사람의 개인정보 등 불필요한 정보를 적지 마세요.</p>
+        <p>저장한 장소는 이 기기에만 저장되며, 현재 로그인 여부와 관계없이 계정 서버에 동기화하지 않습니다. 틈새는 개인정보를 판매하거나 맞춤 광고에 사용하지 않으며, 이 배포본에는 별도의 광고·이용행태 분석 SDK를 넣지 않았습니다.</p>
+        </section>
+
+      <section>
+        <h2>3. 외부 서비스 이용과 정보 전달</h2>
+        <ul>
+          <li><strong>Vercel:</strong> API·안내 페이지 호스팅과 요청 처리. 검색어·선택 장소의 좌표 등 API 요청값, 접속·오류 정보가 처리됩니다. 이용자가 계정 삭제를 요청할 때에는 인증 토큰과 계정 확인 결과도 처리합니다.</li>
+          <li><strong>Supabase:</strong> 선택 로그인·인증과 계정·프로필 데이터베이스, 서비스용 장소 데이터 조회. 현재 프로젝트의 주 데이터 저장 지역은 대한민국 서울(ap-northeast-2)입니다. 경로 주변 장소를 찾기 위한 좌표 범위가 데이터 조회 조건에 포함됩니다. 이 조회 조건은 개인 여행 이력을 별도 테이블에 저장하는 것과 구분됩니다.</li>
+          <li><strong>카카오 지도·로컬 API, 카카오모빌리티 경로 API:</strong> 지도 표시, 검색어 기반 장소 검색, 선택 좌표의 주소·지역 및 경로·이동시간 계산에 필요한 정보를 전달합니다. 이용자가 카카오 로그인을 선택하면 인증도 해당 제공자를 거칩니다.</li>
+          <li><strong>Google:</strong> 이용자가 Google 로그인을 선택한 경우 로그인 인증을 처리합니다. 문의 이메일은 Gmail을 이용해 수신·회신합니다.</li>
+          <li><strong>관광·기상 등 공공데이터와 사진 제공자:</strong> 관광지 정보, 사진과 날씨를 표시할 때 해당 장소·격자·예보시각 또는 사진 주소를 사용합니다. 이를 위해 휴대전화의 실제 현재 위치를 취득하지 않습니다. 사진 등 외부 콘텐츠 요청 시 접속 정보가 해당 제공자에게 전달될 수 있습니다.</li>
+        </ul>
+        <p>이용자가 ‘길안내’를 선택하면 선택한 장소의 이름·좌표로 구성한 경로를 카카오맵 앱 또는 웹페이지로 전달합니다. 전환된 서비스에서 추가로 사용하는 현재 위치나 계정정보는 해당 서비스의 권한 설정과 개인정보처리방침에 따릅니다.</p>
+        </section>
+
+      <section>
+        <h2>4. 국외 처리</h2>
+        <p>틈새 API는 Vercel의 미국 워싱턴 D.C. 권역(iad1) 서버에서 실행됩니다. 이용자가 검색·추천·경로 조회 등을 요청하면 검색어·선택한 장소 좌표·도착시간 등 해당 요청값과 접속정보가 암호화된 통신으로 전달됩니다.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">이전받는 자·국가</th><th scope="col">항목·목적·시기와 방법</th><th scope="col">처리·보관</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Vercel Inc.<br />미국(iad1)<br /><a href="mailto:privacy@vercel.com">privacy@vercel.com</a></th><td>검색어, 선택한 출발지·목적지·경유지 좌표, 선택 조건·도착 마감, 접속·오류 정보. 온라인 기능 요청 때마다 HTTPS로 전달하여 검색·추천·경로를 계산하고 보안·장애에 대응합니다.</td><td>기능 요청 계산 중 처리하며 틈새 DB에 개인 여행 이력을 별도 저장하지 않습니다. Runtime Logs의 현재 Hobby 보관 범위는 1시간입니다. 기반 서비스의 다른 기록과는 구분합니다.</td></tr>
+            <tr><th scope="row">Vercel Inc.<br />미국(iad1)</th><td>계정 삭제 요청 때 인증 토큰과 계정 확인 응답을 HTTPS로 전달·처리합니다. 확인 응답에 포함된 계정 식별자·이메일·프로필 메타데이터가 일시 처리될 수 있습니다. 코드에서는 계정 식별자만 추출해 삭제 대상 확인에 사용합니다.</td><td>계정 확인·삭제 요청 처리 중 사용합니다. 검증 응답·토큰을 앱의 별도 테이블이나 로그에 의도적으로 기록하지 않습니다. 접속·보안 기록은 별도입니다.</td></tr>
+          </tbody>
+        </table></div>
+        <p><strong>국내 주 데이터 저장과의 구분:</strong> 프로필 조회·수정은 앱에서 Supabase로 직접 요청하며, 현재 주 데이터 지역은 서울입니다. 그러나 계정 삭제 시에는 위 미국 서버를 경유합니다. 서울 주 데이터 지역이 공급자의 모든 하위처리·인증·운영 기록까지 국내에 한정된다는 뜻은 아닙니다.</p>
+        <p>Vercel의 개인정보 문의 연락처는 <a href="mailto:privacy@vercel.com">privacy@vercel.com</a>, Supabase의 문의 연락처는 <a href="mailto:privacy@supabase.com">privacy@supabase.com</a>입니다. 틈새의 정보 처리와 권리 행사 문의는 아래 운영자에게도 요청할 수 있습니다.</p>
+        <p>선택 로그인 없이도 장소 검색·추천과 기기 내 저장을 이용할 수 있습니다. 다만 온라인 검색·추천·경로 기능에는 서버와 지도·경로 제공자로의 요청 전달이 필요하므로 해당 처리를 원하지 않는 경우 그 기능을 이용할 수 없습니다. 로그인 제공자 연결과 계정 삭제는 아래 안내에 따라 관리할 수 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>5. 보유 기간과 삭제</h2>
+        <ul>
+          <li><strong>계정·프로필:</strong> 계정 이용 기간 동안 보관합니다. 계정 삭제가 정상 처리되면 틈새의 인증 계정과 연결 프로필을 삭제하고 기기의 로그인 세션을 해제합니다. 카카오·Google 자체 계정은 삭제하지 않습니다. 공급자의 별도 보안 기록·백업까지 같은 순간 모두 지워진다고 보장하지 않습니다.</li>
+          <li><strong>장소·경로 요청:</strong> 틈새의 애플리케이션 데이터베이스에 이용자별 검색·여행 이력을 의도적으로 저장하지 않습니다. 계산 과정의 일시 처리와 기반 서비스의 접속·오류 기록은 구분되며, 요청 경로 등에 포함된 정보는 공급자의 기록에 남을 수 있습니다.</li>
+          <li><strong>IP 기반 요청 제한:</strong> 서버 인스턴스의 메모리에 IP별 요청 수를 보관하고 60초 단위로 제한 여부를 계산합니다. 60초는 요청 수를 세는 구간이며 IP 항목의 자동 삭제 기한이 아닙니다. 항목은 이후 요청·메모리 항목 교체 또는 인스턴스 종료 등에 따라 정리됩니다.</li>
+          <li><strong>출발 알림:</strong> 기기에 저장한 알림은 해제하거나 다른 알림으로 교체할 수 있습니다. 도착 마감시각으로부터 2시간이 지난 경로는 유효하지 않은 것으로 처리하고, 이후 해당 상태를 읽을 때 정리합니다. 앱 시작 시 출발시각이 지난 알림이나 이전 버전·다른 위치 모드의 알림도 정리합니다. 해당 시각에 저장매체에서 즉시 자동 파기된다는 뜻은 아닙니다.</li>
+          <li><strong>저장 장소·설정·복원 상태:</strong> 앱에서 저장을 해제하면 저장 목록에서 제외됩니다. 해제된 장소의 일부 로컬 기록은 남아 있을 수 있습니다. 기기의 앱 데이터를 완전히 지우려면 Android 설정에서 틈새의 저장공간 데이터를 삭제하거나 앱을 제거하세요. 계정 삭제만으로 기기의 저장 장소가 삭제되지는 않습니다.</li>
+          <li><strong>기반 서비스의 운영 기록:</strong> Vercel Hobby의 Runtime Logs 조회·보관 범위는 공식 안내상 1시간입니다. 이는 해당 런타임 로그 기능의 범위이며 Vercel·다른 공급자의 모든 보안·인프라 기록이 1시간 후 완전히 삭제된다는 뜻은 아닙니다.</li>
+          <li><strong>문의 이메일:</strong> 문의 해결 후 30일 이내에 삭제합니다. 분쟁 대응이나 법령상 보존이 필요한 경우에는 해당 정보만 별도로 보관하고 사유·대상·기간을 안내합니다.</li>
+          <li><strong>Supabase 로그:</strong> 현재 Free 요금제의 공식 기능별 보관 범위는 API·데이터베이스 로그 1일, Auth Audit Logs 1시간입니다. 이 수치를 모든 인증·보안·백업 기록의 최종 삭제 기한으로 확대하지 않습니다.</li>
+        </ul>
+        <p>이용자는 아래 이메일로 개인정보 열람·정정·삭제·처리정지를 요청할 수 있습니다. 법령상 보존하거나 요청을 제한해야 하는 정보가 있는 경우에는 해당 사유와 대상 범위를 설명합니다.</p>
+      </section>
+
+      <section>
+        <h2>6. 보호 조치와 선택권</h2>
+        <p>API·인증·프로필 통신에는 HTTPS를 사용하고, 계정 데이터에는 데이터베이스 행 단위 접근 제어를 적용합니다. 서버 전용 관리 키를 앱에 포함하지 않습니다. 앱은 로그인 토큰이나 프로필을 애플리케이션 로그에 의도적으로 기록하지 않습니다. 저장 장소 데이터베이스와 알림·세션을 담는 SharedPreferences는 Android 클라우드 백업 및 기기 이전 대상에서 제외하도록 설정했습니다.</p>
+        <p>알림 권한을 허용하지 않으면 기기 출발 알림을 받을 수 없지만 장소 검색·추천은 이용할 수 있습니다. 이 수동 출발지 버전은 위치 권한을 필요로 하지 않습니다. 현재 프로필 화면에서는 닉네임을 수정할 수 있습니다. 과거 입력한 연령대·성별의 삭제는 계정 삭제 또는 아래 문의를 통해 요청할 수 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>7. 이용자의 권리와 문의</h2>
+        <p>설정의 계정 화면에서 프로필을 수정하거나 계정 삭제를 요청할 수 있습니다. 앱을 이용하기 어렵다면 이메일로 열람·정정·삭제·처리정지 또는 동의 철회를 요청하세요. 본인이나 적법한 대리인 확인에 필요한 최소 정보만 확인하며, 비밀번호나 인증 토큰을 이메일로 요구하지 않습니다.</p>
+        <p>서비스·개인정보 보호 담당: <strong>틈새(Tteumsae) · 신홍</strong><br />이메일: <a href="mailto:godburgundy@gmail.com">godburgundy@gmail.com</a></p>
+        <p><a href="https://privacy.kisa.or.kr/">개인정보침해신고센터</a>(국번 없이 118) 또는 <a href="https://www.kopico.go.kr/">개인정보분쟁조정위원회</a>에 상담·구제를 요청할 수도 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>8. 방침 변경</h2>
+        <p>이전 방침은 <a href="/privacy-20260828.html">2026년 8월 28일 시행본</a>에서 확인할 수 있습니다.</p>
+        <p>처리 항목·목적·공급자·보유기간 등 실제 운영 내용이 달라지면 변경 사항과 시행일을 알립니다. 향후 기기의 현재 위치를 사용하는 버전을 출시하는 경우에는 기능과 필요한 권한·동의·안내를 별도로 준비하며, 이 수동 버전의 기능을 원격으로 자동 위치 모드로 바꾸지 않습니다.</p>
+      </section>
+      <footer>© 2026 틈새(Tteumsae). 운영자 신홍.</footer>
+    </main>
+  </body>
+</html>

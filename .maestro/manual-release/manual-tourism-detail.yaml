@@ -1,0 +1,22 @@
+# Run explicitly after preparing the documented release-QA state; not a general smoke flow.
+appId: com.tteumsae.app
+name: Manual release - selected Sunpo beach detail
+---
+- assertVisible: "목록 보기"
+- tapOn: "목록 보기"
+- scrollUntilVisible:
+    element: "순포해변 장소 정보 보기"
+    direction: UP
+- tapOn: "순포해변 장소 정보 보기"
+- extendedWaitUntil:
+    visible: "장소 상세"
+    timeout: 15000
+- assertVisible: "순포해변"
+- extendedWaitUntil:
+    notVisible: "최신 장소 정보를 확인하고 있어요"
+    timeout: 45000
+- takeScreenshot: tourist-08-sunpo-detail-top
+- scrollUntilVisible:
+    element: ".*날씨"
+    direction: DOWN
+- takeScreenshot: tourist-09-sunpo-detail-info

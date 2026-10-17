@@ -1,0 +1,18 @@
+# Run explicitly after preparing the documented release-QA state; not a general smoke flow.
+appId: com.tteumsae.app
+name: Manual release - loaded tourism screens
+---
+# Starts at guest settings after the saved/settings flow.
+- assertVisible: "계정 없이 사용 중"
+- tapOn: "장소 탐색"
+- extendedWaitUntil:
+    notVisible: "장소를 더 불러오고 있어요"
+    timeout: 60000
+- assertVisible: '표시 중 [0-9]+곳'
+- takeScreenshot: tourist-14-explore-loaded
+- tapOn: "찜"
+- extendedWaitUntil:
+    notVisible: "장소를 더 불러오고 있어요"
+    timeout: 60000
+- assertVisible: "순포해변"
+- takeScreenshot: tourist-15-saved-loaded

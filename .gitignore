@@ -9,7 +9,9 @@ Thumbs.db
 **/.gradle/
 **/.kotlin/
 **/build/
+.maestro/screenshots/
 **/local.properties
+**/keystore.properties
 **/*.apk
 **/*.aab
 **/*.jks
@@ -23,6 +25,10 @@ Thumbs.db
 !**/.env.example
 
 # Temporary and sensitive files
+.worktrees/
+.local-backup/
+/tmp/
+/output/
 **/*.log
 **/*.tmp
 **/*.zip

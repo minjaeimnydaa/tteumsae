@@ -1,0 +1,148 @@
+appId: com.tteumsae.app
+name: Visual regression - settings and account
+tags:
+  - visual
+  - visual-settings
+---
+- launchApp
+- runFlow:
+    label: Cancel any confirmation left open from an interrupted run
+    when:
+      visible: '(계정을 삭제할까요\?|정말 영구 삭제할까요\?|마지막으로 로그인해 주세요|저장 목록을 비울까요\?|캐시를 지울까요\?)'
+    commands:
+      - tapOn: "취소"
+- runFlow:
+    label: Close the login sheet when it is already open
+    when:
+      visible: "로그인하고 프로필을 설정하세요"
+    commands:
+      - back
+- runFlow:
+    label: Leave profile when it is open
+    when:
+      visible: "기본 정보"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Leave saved-place detail when it is open
+    when:
+      visible: "카카오맵에서 보기"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Leave route-place detail when it is open
+    when:
+      visible: "카카오맵에서 경유지로 안내"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Cancel an in-progress route search
+    when:
+      visible: "검색 취소"
+    commands:
+      - tapOn: "검색 취소"
+- runFlow:
+    label: Leave populated results when they are open
+    when:
+      visible: "들를 곳을 골라보세요"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Leave empty results when they are open
+    when:
+      visible: "추천 가능한 장소가 없어요"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Return home from route input
+    when:
+      visible: '어디로, 몇 시까지 가나요\?'
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Dismiss the daily introduction when available
+    when:
+      visible: '강원도로 가는 길, 어디 들를까\?'
+    commands:
+      - tapOn: "확인"
+- tapOn: "설정"
+- extendedWaitUntil:
+    visible: "앱 사용"
+    timeout: 10000
+- assertVisible: "계정"
+- takeScreenshot:
+    path: visual-16-settings-top
+    label: Settings and account card
+
+- runFlow:
+    label: Capture the login sheet without starting sign-in
+    when:
+      visible: "계정 없이 사용 중"
+    commands:
+      - tapOn: "로그인하기"
+      - extendedWaitUntil:
+          visible: "로그인하고 프로필을 설정하세요"
+          timeout: 5000
+      - assertVisible: "카카오로 계속하기"
+      - assertVisible: "Google로 계속하기"
+      - takeScreenshot:
+          path: visual-17-login-sheet
+          label: Optional login sheet
+      - back
+      - assertVisible: "계정 없이 사용 중"
+
+- runFlow:
+    label: Capture profile and safely cancel account deletion for a signed-in account
+    when:
+      visible: "^(카카오 로그인|Google 로그인)$"
+    commands:
+      - tapOn: "^(카카오 로그인|Google 로그인)$"
+      - extendedWaitUntil:
+          visible: "기본 정보"
+          timeout: 10000
+      - assertVisible: "닉네임"
+      - assertVisible: "저장"
+      - takeScreenshot:
+          path: visual-18-profile
+          label: Profile edit without changes
+      - tapOn: "뒤로"
+      - extendedWaitUntil:
+          visible: "계정 삭제"
+          timeout: 5000
+      - tapOn: "계정 삭제"
+      - assertVisible: '계정을 삭제할까요\?'
+      - takeScreenshot:
+          path: visual-19-account-delete-confirmation
+          label: Account deletion first confirmation
+      - tapOn: "취소"
+      - assertVisible: "계정 삭제"
+
+- scrollUntilVisible:
+    element: "캐시 지우기"
+    direction: DOWN
+- tapOn: "캐시 지우기"
+- assertVisible: '캐시를 지울까요\?'
+- takeScreenshot:
+    path: visual-20-cache-confirmation
+    label: Cache clear confirmation
+- tapOn: "취소"
+- assertVisible: "캐시 지우기"
+
+- runFlow:
+    label: Capture and cancel saved-place clearing when it is enabled
+    when:
+      visible: "이 기기에 [1-9][0-9]*개 저장됨"
+    commands:
+      - tapOn: "저장한 장소 비우기"
+      - assertVisible: '저장 목록을 비울까요\?'
+      - takeScreenshot:
+          path: visual-21-saved-clear-confirmation
+          label: Saved-place clear confirmation
+      - tapOn: "취소"
+      - assertVisible: "저장한 장소 비우기"
+
+- takeScreenshot:
+    path: visual-22-settings-storage
+    label: Settings storage section
+- tapOn: "지도"
+- assertVisible: "목적지 검색"
