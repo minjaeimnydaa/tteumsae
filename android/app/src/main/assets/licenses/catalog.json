@@ -1,0 +1,1730 @@
+{
+  "generatedOn": "2026-09-13",
+  "basis": "release-artifact-dependencies.xml package roots; resolved release SDK metadata",
+  "scopeNote": "릴리스에 해석된 110개 JVM/Android 모듈 및 Pretendard 폰트. 카카오 SDK 내부 네이티브 구성은 제공사의 공식 공통 OSS 고지로 별도 제공. 모든 간접 코드 권리의 독립적 법률 감사 완료를 의미하지 않습니다.",
+  "documents": [
+    {
+      "title": "Apache License 2.0",
+      "file": "apache-2.0.txt",
+      "source": "https://raw.githubusercontent.com/jspecify/jspecify/v1.0.0/LICENSE"
+    },
+    {
+      "title": "AndroidX 배포 라이선스 원문",
+      "file": "androidx-license.txt",
+      "source": "androidx.activity:activity-compose:1.10.0@aar!/META-INF/androidx/activity/activity-compose/LICENSE.txt"
+    },
+    {
+      "title": "Supabase Kotlin · MIT",
+      "file": "supabase-kt-mit.txt",
+      "source": "https://raw.githubusercontent.com/supabase-community/supabase-kt/3.5.0/LICENSE"
+    },
+    {
+      "title": "SLF4J · MIT",
+      "file": "slf4j-mit.txt",
+      "source": "org.slf4j:slf4j-api:2.0.17@jar!/META-INF/LICENSE.txt"
+    },
+    {
+      "title": "Pretendard 폰트 · SIL OFL 1.1",
+      "file": "pretendard-ofl.txt",
+      "source": "https://github.com/orioncactus/pretendard/blob/main/LICENSE"
+    },
+    {
+      "title": "KakaoMaps Android SDK · 제3자 고지",
+      "file": "kakao-maps-oss.txt",
+      "source": "https://apis.map.kakao.com/android_v2/license/"
+    },
+    {
+      "title": "Kotlin 상위 배포 NOTICE",
+      "file": "kotlin-notice.txt",
+      "source": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.3.20/license/NOTICE.txt"
+    }
+  ],
+  "modules": [
+    {
+      "coordinate": "androidx.activity:activity-compose:1.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/activity#1.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/activity/activity-compose/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.activity:activity-ktx:1.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/activity#1.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/activity/activity-ktx/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.activity:activity:1.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/activity#1.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/activity/activity/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.annotation:annotation-experimental:1.5.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/annotation#1.5.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/annotation/annotation-experimental/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.annotation:annotation-jvm:1.9.1@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/annotation#1.9.1",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/annotation/annotation/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.arch.core:core-common:2.2.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/arch-core#2.2.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.arch.core:core-runtime:2.2.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/arch-core#2.2.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.autofill:autofill:1.0.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.browser:browser:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/browser#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/browser/browser/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.collection:collection-jvm:1.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/collection#1.5.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/collection/collection/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.collection:collection-ktx:1.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/collection#1.5.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/collection/collection-ktx/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.animation:animation-android:1.7.6@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-animation#1.7.6",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.compose.animation:animation-core-android:1.7.6@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-animation#1.7.6",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.compose.foundation:foundation-android:1.7.6@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-foundation#1.7.6",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.compose.foundation:foundation-layout-android:1.7.6@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-foundation#1.7.6",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.compose.material:material-icons-core-android:1.7.6@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-material#1.7.6",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.compose.material:material-icons-extended-android:1.7.6@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-material#1.7.6",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.compose.material:material-ripple-android:1.7.6@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-material#1.7.6",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.compose.material3:material3-android:1.3.1@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-material3#1.3.1",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.compose.runtime:runtime-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-runtime#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/runtime/runtime/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.runtime:runtime-annotation-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-runtime#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/runtime/runtime-annotation/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.runtime:runtime-saveable-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-runtime#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/runtime/runtime-saveable/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.ui:ui-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-ui#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/ui/ui/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.ui:ui-geometry-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-ui#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/ui/ui-geometry/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.ui:ui-graphics-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-ui#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/ui/ui-graphics/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.ui:ui-text-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-ui#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/ui/ui-text/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.ui:ui-tooling-preview-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-ui#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/ui/ui-tooling-preview/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.ui:ui-unit-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-ui#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/ui/ui-unit/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.compose.ui:ui-util-android:1.9.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/compose-ui#1.9.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/compose/ui/ui-util/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.concurrent:concurrent-futures:1.1.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/topic/libraries/architecture/index.html",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.core:core-ktx:1.15.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/core#1.15.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/core/core-ktx/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.core:core-viewtree:1.0.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/core#1.0.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/core/core-viewtree/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.core:core:1.15.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/core#1.15.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/core/core/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.customview:customview-poolingcontainer:1.0.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/customview#1.0.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.emoji2:emoji2:1.4.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/emoji2#1.4.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.graphics:graphics-path:1.0.1@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/graphics#1.0.1",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.interpolator:interpolator:1.0.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "http://developer.android.com/tools/extras/support-library.html",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-common-java8:2.10.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-common-java8/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-common-jvm:2.10.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-common/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-livedata-core:2.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-livedata-core/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-process:2.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-process/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-runtime-android:2.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-runtime/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-runtime-compose-android:2.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-runtime-compose/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-runtime-ktx-android:2.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-runtime-ktx/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-viewmodel-android:2.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-viewmodel/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-viewmodel-compose-android:2.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-viewmodel-compose/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-viewmodel-ktx:2.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-viewmodel-ktx/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.10.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/lifecycle#2.10.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/lifecycle/lifecycle-viewmodel-savedstate/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.profileinstaller:profileinstaller:1.4.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/profileinstaller#1.4.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/profileinstaller/profileinstaller/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.room:room-common-jvm:2.8.4@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/room#2.8.4",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/room/room-common/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.room:room-ktx:2.8.4@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/room#2.8.4",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/room/room-ktx/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.room:room-runtime-android:2.8.4@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/room#2.8.4",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/room/room-runtime/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.savedstate:savedstate-android:1.4.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/savedstate#1.4.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/savedstate/savedstate/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.savedstate:savedstate-compose-android:1.4.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/savedstate#1.4.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/savedstate/savedstate-compose/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.savedstate:savedstate-ktx:1.4.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/savedstate#1.4.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/savedstate/savedstate-ktx/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.sqlite:sqlite-android:2.6.2@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/sqlite#2.6.2",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/sqlite/sqlite/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.sqlite:sqlite-framework-android:2.6.2@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/sqlite#2.6.2",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/sqlite/sqlite-framework/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.startup:startup-runtime:1.2.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/startup#1.2.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/androidx/startup/startup-runtime/LICENSE.txt"
+      ]
+    },
+    {
+      "coordinate": "androidx.tracing:tracing:1.2.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://developer.android.com/jetpack/androidx/releases/tracing#1.2.0",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "androidx.versionedparcelable:versionedparcelable:1.1.1@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "http://developer.android.com/tools/extras/support-library.html",
+      "documents": [
+        "apache-2.0.txt",
+        "androidx-license.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "co.touchlab:kermit-android:2.1.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/touchlab/Kermit",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "co.touchlab:kermit-core-android:2.1.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/touchlab/Kermit",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "com.google.guava:listenablefuture:1.0@jar",
+      "licenseNames": [
+        "Apache License 2.0"
+      ],
+      "licenseUrls": [
+        "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/26.0-android/guava-parent-26.0-android.pom"
+      ],
+      "projectUrl": "",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "com.kakao.maps.open:android:2.14.0@aar",
+      "licenseNames": [
+        "Kakao 서비스 이용 조건 / SDK 제3자 고지"
+      ],
+      "licenseUrls": [
+        "https://apis.map.kakao.com/android_v2/license/"
+      ],
+      "projectUrl": "",
+      "documents": [
+        "kakao-maps-oss.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "com.russhwolf:multiplatform-settings-android:1.3.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/russhwolf/multiplatform-settings",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "com.russhwolf:multiplatform-settings-coroutines-android:1.3.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/russhwolf/multiplatform-settings",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "com.russhwolf:multiplatform-settings-no-arg-android:1.3.0@aar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/russhwolf/multiplatform-settings",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "com.squareup.okio:okio-jvm:3.17.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/square/okio/",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "dev.whyoleg.cryptography:cryptography-bigint-jvm:0.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/whyoleg/cryptography-kotlin",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "dev.whyoleg.cryptography:cryptography-core-jvm:0.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/whyoleg/cryptography-kotlin",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "dev.whyoleg.cryptography:cryptography-provider-base-jvm:0.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/whyoleg/cryptography-kotlin",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "dev.whyoleg.cryptography:cryptography-provider-jdk-jvm:0.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/whyoleg/cryptography-kotlin",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "dev.whyoleg.cryptography:cryptography-provider-optimal-jvm:0.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/whyoleg/cryptography-kotlin",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "dev.whyoleg.cryptography:cryptography-random-jvm:0.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/whyoleg/cryptography-kotlin",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "dev.whyoleg.cryptography:cryptography-serialization-asn1-jvm:0.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/whyoleg/cryptography-kotlin",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "dev.whyoleg.cryptography:cryptography-serialization-asn1-modules-jvm:0.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/whyoleg/cryptography-kotlin",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "dev.whyoleg.cryptography:cryptography-serialization-pem-jvm:0.5.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/whyoleg/cryptography-kotlin",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.github.jan-tennert.supabase:auth-kt-android:3.5.0@aar",
+      "licenseNames": [
+        "MIT License"
+      ],
+      "licenseUrls": [
+        "https://github.com/supabase-community/supabase-kt/blob/master/LICENSE"
+      ],
+      "projectUrl": "https://github.com/supabase-community/supabase-kt/",
+      "documents": [
+        "supabase-kt-mit.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.github.jan-tennert.supabase:postgrest-kt-android:3.5.0@aar",
+      "licenseNames": [
+        "MIT License"
+      ],
+      "licenseUrls": [
+        "https://github.com/supabase-community/supabase-kt/blob/master/LICENSE"
+      ],
+      "projectUrl": "https://github.com/supabase-community/supabase-kt/",
+      "documents": [
+        "supabase-kt-mit.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.github.jan-tennert.supabase:supabase-kt-android:3.5.0@aar",
+      "licenseNames": [
+        "MIT License"
+      ],
+      "licenseUrls": [
+        "https://github.com/supabase-community/supabase-kt/blob/master/LICENSE"
+      ],
+      "projectUrl": "https://github.com/supabase-community/supabase-kt/",
+      "documents": [
+        "supabase-kt-mit.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-client-android-jvm:3.0.3@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-client-content-negotiation-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-client-core-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-events-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-http-cio-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-http-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-io-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-network-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-serialization-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-serialization-kotlinx-json-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-serialization-kotlinx-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-sse-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-utils-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-websocket-serialization-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "io.ktor:ktor-websockets-jvm:3.4.2@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/ktorio/ktor",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains:annotations:23.0.0@jar",
+      "licenseNames": [
+        "The Apache Software License, Version 2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/JetBrains/java-annotations",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-reflect:2.3.20@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://kotlinlang.org/",
+      "documents": [
+        "apache-2.0.txt",
+        "kotlin-notice.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib:2.3.20@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://kotlinlang.org/",
+      "documents": [
+        "apache-2.0.txt",
+        "kotlin-notice.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm:0.4.0@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx.collections.immutable",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx.coroutines",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.10.2@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx.coroutines",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j:1.10.2@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx.coroutines",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-datetime-jvm:0.7.1@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx-datetime",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-io-bytestring-jvm:0.8.2@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx-io",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-io-core-jvm:0.8.2@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx-io",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.10.0@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx.serialization",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-serialization-json-io-jvm:1.10.0@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx.serialization",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.10.0@jar",
+      "licenseNames": [
+        "Apache-2.0"
+      ],
+      "licenseUrls": [
+        "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      ],
+      "projectUrl": "https://github.com/Kotlin/kotlinx.serialization",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.jspecify:jspecify:1.0.0@jar",
+      "licenseNames": [
+        "Apache License 2.0"
+      ],
+      "licenseUrls": [
+        "https://github.com/jspecify/jspecify/blob/v1.0.0/LICENSE"
+      ],
+      "projectUrl": "",
+      "documents": [
+        "apache-2.0.txt"
+      ],
+      "bundledNotices": []
+    },
+    {
+      "coordinate": "org.slf4j:slf4j-api:2.0.17@jar",
+      "licenseNames": [
+        "MIT License"
+      ],
+      "licenseUrls": [],
+      "projectUrl": "",
+      "documents": [
+        "slf4j-mit.txt"
+      ],
+      "bundledNotices": [
+        "META-INF/LICENSE.txt"
+      ]
+    }
+  ]
+}

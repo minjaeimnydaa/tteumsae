@@ -1,0 +1,37 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "fluid": true,
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/account-deletion",
+      "destination": "/account-deletion.html"
+    },
+    {
+      "source": "/downloads/tteumsae-latest-debug.apk",
+      "destination": "/downloads/tteumsae-v0.4.0-debug.apk"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/tour-catalog-sync",
+      "schedule": "20 18 * * *"
+    },
+    {
+      "path": "/api/cron/tour-intro-sync",
+      "schedule": "20 22 * * *"
+    },
+    {
+      "path": "/api/cron/tour-intro-sync?stage=presentation",
+      "schedule": "40 22 * * *"
+    }
+  ]
+}

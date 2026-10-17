@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Ephemeral route coordinates and auth sessions must remain device-local. -->
+    <exclude domain="sharedpref" path="." />
+    <!-- Saved places are device-local, including the Room database sidecar files. -->
+    <exclude domain="database" path="." />
+</full-backup-content>

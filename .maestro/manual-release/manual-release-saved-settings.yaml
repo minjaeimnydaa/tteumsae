@@ -1,0 +1,39 @@
+# Run explicitly after preparing the documented release-QA state; not a general smoke flow.
+appId: com.tteumsae.app
+name: Manual release - guest saved place and settings
+---
+- runFlow:
+    when:
+      visible: "장소 상세"
+    commands:
+      - assertVisible: "순포해변"
+      - runFlow:
+          when:
+            visible: "^저장$"
+          commands:
+            - tapOn: "^저장$"
+      - assertVisible: "저장 해제"
+      - tapOn: "뒤로"
+      - tapOn: "뒤로"
+      - tapOn: "뒤로"
+      - assertVisible: "목적지 검색"
+      - tapOn: "장소 탐색"
+- extendedWaitUntil:
+    visible: '표시 중 [0-9]+곳'
+    timeout: 30000
+- tapOn: "관광지"
+- takeScreenshot: tourist-10-explore
+- tapOn: "찜"
+- assertVisible: "순포해변"
+- takeScreenshot: tourist-11-saved
+- tapOn: "설정"
+- assertVisible: "계정 없이 사용 중"
+- assertNotVisible: "위치 권한"
+- takeScreenshot: tourist-12-settings
+- tapOn: "로그인하기"
+- assertVisible: "로그인하고 프로필을 설정하세요"
+- assertVisible: "카카오로 계속하기"
+- assertVisible: "Google로 계속하기"
+- takeScreenshot: tourist-13-optional-login
+- back
+- assertVisible: "계정 없이 사용 중"

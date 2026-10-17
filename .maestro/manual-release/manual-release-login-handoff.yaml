@@ -1,0 +1,15 @@
+# Run explicitly after preparing the documented release-QA state; not a general smoke flow.
+appId: com.tteumsae.app
+name: Manual release - optional login handoff
+---
+# Starts in route map view, stops before any third-party consent or credentials.
+- assertVisible: "목록 보기"
+- tapOn: "뒤로"
+- assertVisible: '어디로, 몇 시까지 가나요\?'
+- tapOn: "뒤로"
+- assertVisible: "목적지 검색"
+- tapOn: "설정"
+- assertVisible: "계정 없이 사용 중"
+- tapOn: "로그인하기"
+- assertVisible: "카카오로 계속하기"
+- tapOn: "카카오로 계속하기"

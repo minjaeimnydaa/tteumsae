@@ -1,0 +1,56 @@
+# Run explicitly after preparing the documented release-QA state; not a general smoke flow.
+appId: com.tteumsae.app
+name: Manual release - notices and tourist image rights
+---
+# Installed code32; preserves the existing signed-in account and saved place.
+- launchApp
+- runFlow:
+    when:
+      visible: '강원도로 가는 길, 어디 들를까\?'
+    commands:
+      - tapOn: "확인"
+- tapOn: "설정"
+- assertVisible: "카카오 로그인"
+- scrollUntilVisible:
+    element: "오픈소스 라이선스"
+    direction: DOWN
+- tapOn: "오픈소스 라이선스"
+- extendedWaitUntil:
+    visible: "Pretendard 폰트 · SIL OFL 1.1"
+    timeout: 10000
+- takeScreenshot: release-32-license-list
+- tapOn: "Pretendard 폰트 · SIL OFL 1.1"
+- assertVisible: ".*SIL OPEN FONT LICENSE.*"
+- takeScreenshot: release-32-font-license
+- tapOn: "목록"
+- tapOn: "Supabase Kotlin · MIT"
+- assertVisible: ".*Jan Tennert.*"
+- tapOn: "목록"
+- tapOn: "KakaoMaps Android SDK · 제3자 고지"
+- extendedWaitUntil:
+    notVisible: "문서를 여는 중이에요."
+    timeout: 10000
+- takeScreenshot: release-32-kakao-notices
+- back
+- assertVisible: "Pretendard 폰트 · SIL OFL 1.1"
+- tapOn: "닫기"
+- assertVisible: "오픈소스 라이선스"
+- tapOn: "장소 탐색"
+- extendedWaitUntil:
+    notVisible: "장소를 더 불러오고 있어요"
+    timeout: 60000
+- tapOn: "관광지"
+- takeScreenshot: release-32-tourism-explore
+- tapOn: "찜"
+- assertVisible: "순포해변"
+- takeScreenshot: release-32-saved
+- tapOn: "순포해변"
+- extendedWaitUntil:
+    notVisible: "최신 장소 정보를 확인하고 있어요"
+    timeout: 45000
+- assertVisible: "순포해변"
+- takeScreenshot: release-32-saved-detail-photo
+- scrollUntilVisible:
+    element: "사진 출처·이용조건 보기"
+    direction: DOWN
+- takeScreenshot: release-32-photo-attribution

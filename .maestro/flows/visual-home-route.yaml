@@ -1,0 +1,267 @@
+appId: com.tteumsae.app
+name: Visual regression - home, route, results, and detail
+tags:
+  - visual
+  - visual-route
+---
+- launchApp
+- runFlow:
+    label: Cancel any confirmation left open from an interrupted run
+    when:
+      visible: '(계정을 삭제할까요\?|정말 영구 삭제할까요\?|마지막으로 로그인해 주세요|저장 목록을 비울까요\?|캐시를 지울까요\?)'
+    commands:
+      - tapOn: "취소"
+- runFlow:
+    label: Close the login sheet when it is already open
+    when:
+      visible: "로그인하고 프로필을 설정하세요"
+    commands:
+      - back
+- runFlow:
+    label: Leave profile when it is open
+    when:
+      visible: "기본 정보"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Leave saved-place detail when it is open
+    when:
+      visible: "카카오맵에서 보기"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Leave route-place detail when it is open
+    when:
+      visible: "카카오맵에서 경유지로 안내"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Cancel an in-progress route search
+    when:
+      visible: "검색 취소"
+    commands:
+      - tapOn: "검색 취소"
+- runFlow:
+    label: Leave populated results when they are open
+    when:
+      visible: "들를 곳을 골라보세요"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Leave empty results when they are open
+    when:
+      visible: "추천 가능한 장소가 없어요"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Return home from route input
+    when:
+      visible: '어디로, 몇 시까지 가나요\?'
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Capture and dismiss the daily introduction when available
+    when:
+      visible: '강원도로 가는 길, 어디 들를까\?'
+    commands:
+      - takeScreenshot:
+          path: visual-01-home-intro
+          label: Home introduction
+      - tapOn: "확인"
+- tapOn: "지도"
+- assertVisible: "목적지 검색"
+- assertVisible: "장소 탐색"
+- assertVisible: "설정"
+- takeScreenshot:
+    path: visual-02-home
+    label: Home map
+
+- tapOn: "목적지 검색"
+- hideKeyboard
+- extendedWaitUntil:
+    visible: '어디로, 몇 시까지 가나요\?'
+    timeout: 10000
+- assertVisible: "도착 마감"
+- takeScreenshot:
+    path: visual-03-location-time
+    label: Route input and inline deadline wheel
+
+- runFlow:
+    label: Replace a restored or current-location start with a deterministic place
+    when:
+      visible: "출발지 지우기"
+    commands:
+      - tapOn: "출발지 지우기"
+      - tapOn: "출발지 장소 검색"
+      - eraseText: 50
+      - inputText: "강릉시청"
+      - hideKeyboard
+      - extendedWaitUntil:
+          visible: "^강릉시청$"
+          timeout: 15000
+      - tapOn:
+          text: "^강릉시청$"
+          index: 1
+- runFlow:
+    label: Select a deterministic start when the field is initially empty
+    when:
+      visible: "출발지 장소 검색"
+    commands:
+      - tapOn: "출발지 장소 검색"
+      - eraseText: 50
+      - inputText: "강릉시청"
+      - hideKeyboard
+      - extendedWaitUntil:
+          visible: "^강릉시청$"
+          timeout: 15000
+      - tapOn:
+          text: "^강릉시청$"
+          index: 1
+
+- tapOn: "목적지 장소 검색"
+- eraseText: 50
+- inputText: "강릉역"
+- hideKeyboard
+- extendedWaitUntil:
+    visible: "^강릉역$"
+    timeout: 15000
+- takeScreenshot:
+    path: visual-04-location-search
+    label: Destination search results
+- tapOn:
+    text: "^강릉역$"
+    index: 1
+- assertVisible: "강릉역"
+- assertVisible: "(오늘|내일) [0-9]{2}:[0-9]{2}까지"
+- takeScreenshot:
+    path: visual-05-location-ready
+    label: Completed route input
+
+# Verify that the input layer can yield to the map without losing the route.
+- swipe:
+    # Start on the visible drag handle; 5% is still on the map above the sheet.
+    start: "50%,11%"
+    end: "50%,82%"
+    duration: 700
+- waitForAnimationToEnd
+- assertNotVisible: "도착 마감"
+- takeScreenshot:
+    path: visual-05a-location-collapsed
+    label: Route input collapsed for map inspection
+- swipe:
+    start: "50%,88%"
+    end: "50%,14%"
+    duration: 700
+- extendedWaitUntil:
+    visible: "도착 마감"
+    timeout: 5000
+- assertVisible: "강릉시청"
+- assertVisible: "강릉역"
+
+# Advance the hour wheel enough for a route that may start outside Gangneung.
+- swipe:
+    start: "34%,55%"
+    end: "34%,42%"
+    duration: 700
+- swipe:
+    start: "34%,55%"
+    end: "34%,42%"
+    duration: 700
+- swipe:
+    start: "34%,55%"
+    end: "34%,42%"
+    duration: 700
+- scrollUntilVisible:
+    element: "틈새 찾기"
+    direction: DOWN
+- tapOn: "틈새 찾기"
+- extendedWaitUntil:
+    visible: "(가는 길 주변을 찾고 있어요|틈새를 찾았어요|들를 곳을 골라보세요)"
+    timeout: 15000
+- runFlow:
+    label: Capture the loading card while it is still visible
+    when:
+      visible: "(가는 길 주변을 찾고 있어요|틈새를 찾았어요)"
+    commands:
+      - takeScreenshot:
+          path: visual-06-loading
+          label: Route loading progress
+- extendedWaitUntil:
+    visible: "들를 곳을 골라보세요"
+    timeout: 60000
+- assertVisible: "목적지로 바로 안내"
+- assertVisible: "^선택$"
+- extendedWaitUntil:
+    notVisible: "지도를 불러오고 있어요"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot:
+    path: visual-07-results-unselected
+    label: Recommendation results before selection
+
+- tapOn:
+    point: "57%,27%"
+- extendedWaitUntil:
+    visible: "이 주변 [0-9]+곳"
+    timeout: 5000
+- waitForAnimationToEnd
+- takeScreenshot:
+    path: visual-07a-cluster-scope
+    label: Cluster members exposed in the result sheet
+- tapOn: "전체 보기"
+- extendedWaitUntil:
+    visible: "경로 주변 추천 [0-9]+곳"
+    timeout: 5000
+
+- swipe:
+    start: "50%,82%"
+    end: "50%,52%"
+    duration: 700
+- waitForAnimationToEnd
+- assertVisible: "^강릉시립미술관 교동$"
+- tapOn: "^강릉시립미술관 교동$"
+- extendedWaitUntil:
+    visible: "선택됨"
+    timeout: 5000
+- assertVisible: "전체 경로"
+- assertVisible: "이곳 들러 카카오맵 안내"
+- waitForAnimationToEnd
+- takeScreenshot:
+    path: visual-08-results-selected
+    label: Recommendation results after selection
+
+- scrollUntilVisible:
+    element: ".*에 출발 알림"
+    direction: DOWN
+- assertVisible: ".*에 출발 알림"
+- scrollUntilVisible:
+    element: "상세보기.*"
+    direction: UP
+- assertVisible: "상세보기.*"
+- tapOn:
+    text: "^상세보기.*"
+    index: 0
+- extendedWaitUntil:
+    visible: "장소 상세"
+    timeout: 10000
+- assertVisible: "카카오맵에서 경유지로 안내"
+- extendedWaitUntil:
+    notVisible: "최신 장소 정보를 확인하고 있어요"
+    timeout: 35000
+- takeScreenshot:
+    path: visual-09-route-detail-top
+    label: Route place detail header
+- scrollUntilVisible:
+    element: ".*한국관광공사 TourAPI.*"
+    direction: DOWN
+- takeScreenshot:
+    path: visual-10-route-detail-info
+    label: Route place visit information
+
+# Restore transient route state to the home screen without changing saved places.
+- tapOn: "뒤로"
+- assertVisible: "들를 곳을 골라보세요"
+- tapOn: "뒤로"
+- assertVisible: '어디로, 몇 시까지 가나요\?'
+- tapOn: "뒤로"
+- assertVisible: "목적지 검색"

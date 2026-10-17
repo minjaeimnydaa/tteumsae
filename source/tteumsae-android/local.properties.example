@@ -1,6 +1,0 @@
-# 새 노트북의 실제 Android SDK 경로로 바꾸세요.
-sdk.dir=C\:\\Users\\YOUR_NAME\\AppData\\Local\\Android\\Sdk
-
-# Kakao Developers 앱의 네이티브 앱 키입니다. REST API 키가 아닙니다.
-KAKAO_MAP_NATIVE_APP_KEY=YOUR_KAKAO_NATIVE_APP_KEY
-

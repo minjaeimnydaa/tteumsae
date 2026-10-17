@@ -1,0 +1,100 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "0f50a46861e619b0c78a4b000d6313c9",
+    "entities": [
+      {
+        "tableName": "saved_places",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`owner_scope` TEXT NOT NULL, `place_id` TEXT NOT NULL, `place_snapshot_json` TEXT NOT NULL, `snapshot_state` TEXT NOT NULL, `desired_saved` INTEGER NOT NULL, `saved_at_millis` INTEGER NOT NULL, `local_revision` INTEGER NOT NULL, `remote_updated_at` TEXT, `sync_state` TEXT NOT NULL, PRIMARY KEY(`owner_scope`, `place_id`))",
+        "fields": [
+          {
+            "fieldPath": "ownerScope",
+            "columnName": "owner_scope",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "placeId",
+            "columnName": "place_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "placeSnapshotJson",
+            "columnName": "place_snapshot_json",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "snapshotState",
+            "columnName": "snapshot_state",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "desiredSaved",
+            "columnName": "desired_saved",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "savedAtMillis",
+            "columnName": "saved_at_millis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "localRevision",
+            "columnName": "local_revision",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "remoteUpdatedAt",
+            "columnName": "remote_updated_at",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "syncState",
+            "columnName": "sync_state",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "owner_scope",
+            "place_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_saved_places_owner_scope",
+            "unique": false,
+            "columnNames": [
+              "owner_scope"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_saved_places_owner_scope` ON `${TABLE_NAME}` (`owner_scope`)"
+          },
+          {
+            "name": "index_saved_places_owner_scope_sync_state",
+            "unique": false,
+            "columnNames": [
+              "owner_scope",
+              "sync_state"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_saved_places_owner_scope_sync_state` ON `${TABLE_NAME}` (`owner_scope`, `sync_state`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0f50a46861e619b0c78a4b000d6313c9')"
+    ]
+  }
+}

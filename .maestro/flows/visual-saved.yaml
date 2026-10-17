@@ -1,0 +1,124 @@
+appId: com.tteumsae.app
+name: Visual regression - saved places
+tags:
+  - visual
+  - visual-saved
+---
+- launchApp
+- runFlow:
+    label: Cancel any confirmation left open from an interrupted run
+    when:
+      visible: '(계정을 삭제할까요\?|정말 영구 삭제할까요\?|마지막으로 로그인해 주세요|저장 목록을 비울까요\?|캐시를 지울까요\?)'
+    commands:
+      - tapOn: "취소"
+- runFlow:
+    label: Close the login sheet when it is already open
+    when:
+      visible: "로그인하고 프로필을 설정하세요"
+    commands:
+      - back
+- runFlow:
+    label: Leave profile when it is open
+    when:
+      visible: "기본 정보"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Leave saved-place detail when it is open
+    when:
+      visible: "카카오맵에서 보기"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Leave route-place detail when it is open
+    when:
+      visible: "카카오맵에서 경유지로 안내"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Cancel an in-progress route search
+    when:
+      visible: "검색 취소"
+    commands:
+      - tapOn: "검색 취소"
+- runFlow:
+    label: Leave populated results when they are open
+    when:
+      visible: "들를 곳을 골라보세요"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Leave empty results when they are open
+    when:
+      visible: "추천 가능한 장소가 없어요"
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Return home from route input
+    when:
+      visible: '어디로, 몇 시까지 가나요\?'
+    commands:
+      - tapOn: "뒤로"
+- runFlow:
+    label: Dismiss the daily introduction when available
+    when:
+      visible: '강원도로 가는 길, 어디 들를까\?'
+    commands:
+      - tapOn: "확인"
+- tapOn: "장소 탐색"
+- extendedWaitUntil:
+    visible: '스팟 \([0-9]+\)'
+    timeout: 30000
+- tapOn: "전체"
+- extendedWaitUntil:
+    visible: '스팟 \([1-9][0-9]*\)'
+    timeout: 30000
+- takeScreenshot:
+    path: visual-11-saved-explore
+    label: Saved explore catalog
+
+- tapOn: "찜"
+- waitForAnimationToEnd
+- takeScreenshot:
+    path: visual-12-saved-filter
+    label: Saved-only filter
+- tapOn: "탐색 위치 검색"
+- eraseText: 80
+- inputText: "maestro_no_result_9384"
+- hideKeyboard
+- extendedWaitUntil:
+    visible: "조건에 맞는 장소가 없어요"
+    timeout: 5000
+- assertVisible: "검색·필터 초기화"
+- takeScreenshot:
+    path: visual-13-saved-empty
+    label: Empty saved search state
+- tapOn: "검색·필터 초기화"
+- extendedWaitUntil:
+    visible: '스팟 \([1-9][0-9]*\)'
+    timeout: 10000
+
+# Card names are remote data; the category below the count is a stable text target.
+- tapOn:
+    text: "^(관광지|음식점|카페|문화시설|축제·행사|쇼핑|레포츠)$"
+    below:
+      text: '스팟 \([1-9][0-9]*\)'
+    index: 0
+- extendedWaitUntil:
+    visible: "카카오맵에서 보기"
+    timeout: 10000
+- takeScreenshot:
+    path: visual-14-saved-detail-top
+    label: Saved place detail header
+- scrollUntilVisible:
+    element: "공식 자료 확인.*"
+    direction: DOWN
+- assertVisible: "공식 자료 확인.*한국관광공사 TourAPI.*"
+- takeScreenshot:
+    path: visual-15-saved-detail-info
+    label: Saved place visit information
+
+- tapOn: "뒤로"
+- assertVisible: "탐색 위치 검색"
+- tapOn: "지도"
+- assertVisible: "목적지 검색"

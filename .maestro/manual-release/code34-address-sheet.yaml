@@ -1,0 +1,123 @@
+# Explicit code34/manual regression only. Read README.md prerequisites first.
+# Start with the app already foregrounded on HOME, intro dismissed, phone unlocked.
+# No launchApp/clearState/login/logout/permission changes or notification creation.
+# Opening a fresh search cancels an existing route reminder: do not run during alarm QA.
+appId: com.tteumsae.app
+name: Code34 - manual address and continuous map-list sheet
+---
+# Stop on an unexpected/stale screen instead of trying blind Back or coordinate taps.
+- assertNotVisible: '어디로, 몇 시까지 가나요\?'
+- assertNotVisible: '(들를 곳을 골라보세요|경유지 선택|추천 가능한 장소가 없어요)'
+- assertNotVisible: '강원도로 가는 길, 어디 들를까\?'
+- assertVisible: "목적지 검색"
+- takeScreenshot: code34-01-home
+- tapOn: "목적지 검색"
+- extendedWaitUntil:
+    visible: '어디로, 몇 시까지 가나요\?'
+    timeout: 10000
+- assertNotVisible: "현재 위치로 설정"
+- assertNotVisible: "출발지 지우기"
+- assertNotVisible: "목적지 지우기"
+- assertVisible: "출발지 장소 검색"
+- tapOn: "출발지 장소 검색"
+- inputText: "강릉시 강릉대로 33"
+- hideKeyboard
+- extendedWaitUntil:
+    visible: "^강원특별자치도 강릉시 강릉대로 33$"
+    timeout: 25000
+- assertVisible: "^주소$"
+- assertVisible: "^강원특별자치도 강릉시 홍제동 1001$"
+- takeScreenshot: code34-02-address-candidate
+# The typed query lacks the province, so this exact canonical address is the result,
+# not the editable field. Do not replace this with an unverified index or point tap.
+- tapOn: "^강원특별자치도 강릉시 강릉대로 33$"
+- hideKeyboard
+- assertVisible: "^강원특별자치도 강릉시 강릉대로 33$"
+- assertVisible: "출발지 지우기"
+- assertNotVisible: "출발지 장소 검색"
+- assertNotVisible: "^주소$"
+- assertVisible: "목적지 장소 검색"
+- tapOn: "목적지 장소 검색"
+# Include the city so the input and exact tourist-attraction result have distinct text.
+- inputText: "강릉 경포대"
+- hideKeyboard
+- extendedWaitUntil:
+    visible: "^경포대$"
+    timeout: 25000
+- tapOn: "^경포대$"
+# Selecting a destination already closes the keyboard. A second hideKeyboard can
+# send Back on this device and leave the form; assert the selected destination directly.
+- assertVisible: "^경포대$"
+- assertVisible: "목적지 지우기"
+- assertNotVisible: "목적지 장소 검색"
+- assertNotVisible: "도착 시각은 지금부터 15분 이후로 정해 주세요"
+# HOME -> new search resets the deadline and defaults to about now + 1 hour.
+# No fixed clock time, wheel-coordinate manipulation or tourism-category toggle.
+- assertVisible:
+    text: "틈새 찾기"
+    enabled: true
+- takeScreenshot: code34-03-address-route-ready
+- tapOn:
+    text: "틈새 찾기"
+    enabled: true
+- extendedWaitUntil:
+    visible: '(들를 곳을 골라보세요|경유지 선택|추천 가능한 장소가 없어요)'
+    timeout: 60000
+- extendedWaitUntil:
+    notVisible: "지도를 불러오고 있어요"
+    timeout: 30000
+- assertVisible: "선택한 출발지 기준"
+- assertVisible:
+    text: "지도 크게 보기"
+    enabled: true
+- assertVisible: "목록 펼치기"
+- assertNotVisible: "지도와 목록 함께 보기"
+- takeScreenshot: code34-04-results-balanced
+
+# BALANCED -> MAP. The same sheet remains mounted and its map control disables.
+- tapOn:
+    text: "지도 크게 보기"
+    enabled: true
+- waitForAnimationToEnd
+- assertVisible:
+    text: "지도 크게 보기"
+    enabled: false
+- assertVisible: "목록 펼치기"
+- takeScreenshot: code34-05-results-map
+
+# MAP -> LIST. The expansion control changes to the explicit balanced-return action.
+- tapOn: "목록 펼치기"
+- extendedWaitUntil:
+    visible: "지도와 목록 함께 보기"
+    timeout: 10000
+- assertVisible:
+    text: "지도 크게 보기"
+    enabled: true
+- assertNotVisible: "목록 펼치기"
+- takeScreenshot: code34-06-results-list
+
+# LIST -> BALANCED, without replacing the result screen or losing the search.
+- tapOn: "지도와 목록 함께 보기"
+- extendedWaitUntil:
+    visible: "목록 펼치기"
+    timeout: 10000
+- assertNotVisible: "지도와 목록 함께 보기"
+- assertVisible:
+    text: "지도 크게 보기"
+    enabled: true
+- assertVisible: "선택한 출발지 기준"
+- takeScreenshot: code34-07-results-balanced-return
+
+# System Back from LIST must return to BALANCED, not leave results.
+- tapOn: "목록 펼치기"
+- extendedWaitUntil:
+    visible: "지도와 목록 함께 보기"
+    timeout: 10000
+- back
+- extendedWaitUntil:
+    visible: "목록 펼치기"
+    timeout: 10000
+- assertNotVisible: "지도와 목록 함께 보기"
+- assertNotVisible: '어디로, 몇 시까지 가나요\?'
+- assertVisible: "선택한 출발지 기준"
+- takeScreenshot: code34-08-results-back-balanced

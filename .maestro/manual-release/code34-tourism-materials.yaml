@@ -1,0 +1,46 @@
+# Run explicitly for public tourism capture; not a general smoke flow.
+# Start on HOME with no active route reminder.
+# No data reset, account action, GPS access or settings changes.
+appId: com.tteumsae.app
+name: Code34 - public tourism submission images
+---
+- assertVisible: "목적지 검색"
+- assertNotVisible: '어디로, 몇 시까지 가나요\?'
+- takeScreenshot: material-01-home
+- tapOn: "목적지 검색"
+- assertVisible: '어디로, 몇 시까지 가나요\?'
+- assertVisible: "출발지 장소 검색"
+- tapOn: "출발지 장소 검색"
+- inputText: "강릉 안목해변"
+- hideKeyboard
+- extendedWaitUntil:
+    visible: "^안목해변$"
+    timeout: 30000
+- tapOn: "^안목해변$"
+- assertVisible: "목적지 장소 검색"
+- tapOn: "목적지 장소 검색"
+- inputText: "강릉 경포대"
+- hideKeyboard
+- extendedWaitUntil:
+    visible: "^경포대$"
+    timeout: 30000
+- tapOn: "^경포대$"
+- assertVisible: "목적지 지우기"
+- tapOn: "관광지"
+- assertVisible:
+    text: "틈새 찾기"
+    enabled: true
+- takeScreenshot: material-02-input
+- tapOn: "틈새 찾기"
+- extendedWaitUntil:
+    visible: '(들를 곳을 골라보세요|경유지 선택|추천 가능한 장소가 없어요)'
+    timeout: 60000
+- extendedWaitUntil:
+    notVisible: "지도를 불러오고 있어요"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot: material-03-results-balanced
+- tapOn: "목록 펼치기"
+- assertVisible: "지도와 목록 함께 보기"
+- waitForAnimationToEnd
+- takeScreenshot: material-04-results-list

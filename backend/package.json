@@ -1,0 +1,22 @@
+{
+  "name": "tteumsae-backend",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "test": "node scripts/run-tests.js",
+    "check": "node scripts/check-project.js",
+    "curation:export": "node scripts/export-place-curations.mjs",
+    "curation:research:apply": "node scripts/apply-tour-curation-research.mjs",
+    "curation:validate": "node scripts/validate-place-curations.mjs",
+    "curation:import": "node scripts/import-place-curations.mjs"
+  },
+  "devDependencies": {
+    "vercel": "^48.0.0"
+  }
+}
